@@ -14,4 +14,10 @@ export class AppComponent implements DoCheck {
   ngDoCheck() {
     this.email = localStorage.getItem('emailContacto');
   }
+
+  borrarEmail() {
+    localStorage.removeItem('emailContacto');
+    // localStorage.clear(); sirve para vaciar todo el localStorage
+    this.email = null;
+  }
 }

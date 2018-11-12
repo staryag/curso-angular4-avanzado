@@ -11,7 +11,7 @@
 <a [routerLink]="['/tienda']">Tienda</a>
 <a [routerLink]="['/contacto']">Contacto</a>
 
-<span>{{email}}</span>
+<span *ngIf="email">Email de contacto: {{email}} <button (click)="borrarEmail()">Eliminar email de contacto</button> <!-- Vaciamos el localstorage --></span>
 
 <hr>
 
